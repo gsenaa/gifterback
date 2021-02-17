@@ -11,6 +11,9 @@ import authMiddleware from './app/middlewares/auth';
 
 const routes = new Router();
 
+routes.get('/giftrback.git', function(req, res) {
+    res.send('hello world');
+  });
 routes.get('/users', UserController.get);
 routes.get('/users/:id', UserController.getId);
 routes.post('/users/post', UserController.post);
