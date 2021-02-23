@@ -12,7 +12,7 @@ import authMiddleware from './app/middlewares/auth';
 const routes = new Router();
 
 routes.get('/', function(req, res) {
-    res.send('hello world');
+    res.send('Gordo viado xD xD');
   });
 routes.get('/users', UserController.get);
 routes.get('/users/:id', UserController.getId);
