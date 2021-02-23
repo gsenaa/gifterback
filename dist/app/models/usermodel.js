@@ -9,7 +9,7 @@ const UserSchema = new (0, _mongoose.Schema)({
     password: String
 });
 
-UserSchema.pre('save', (next) => {
+UserSchema.pre('save', function(next) {
     if (!this.isModified('password')) return next();
 
     if (this.password) {

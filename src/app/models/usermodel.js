@@ -9,7 +9,7 @@ const UserSchema = new Schema({
     password: String
 });
 
-UserSchema.pre('save', (next) => {
+UserSchema.pre('save', function(next) {
     if (!this.isModified('password')) return next();
 
     if (this.password) {
