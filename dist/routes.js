@@ -12,7 +12,7 @@ var _auth = require('./app/middlewares/auth'); var _auth2 = _interopRequireDefau
 const routes = new (0, _express.Router)();
 
 routes.get('/', function(req, res) {
-    res.send('Gordo viado xD xD');
+    res.send('Server up');
   });
 routes.get('/users', _usercontroller2.default.get);
 routes.get('/users/:id', _usercontroller2.default.getId);

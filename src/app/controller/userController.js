@@ -39,7 +39,7 @@ class UserController {
                 email: email,
                 password: password
             })
-            return res.json();
+            return res.status(200).json({ message: 'user registered' });
         }
 
         return res.status(401).json({ error: 'User already exists' });

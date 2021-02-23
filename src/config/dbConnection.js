@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
-//import 'dotenv/config';
+import 'dotenv/config';
+
 
 class Database {
     constructor(){
