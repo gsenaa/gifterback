@@ -1,8 +1,10 @@
-import nodemailer from 'nodemailer'
+import nodemailer from 'nodemailer';
+import 'dotenv/config';
 
-const user = "gabrielsena@giftr.com.br";
-
-const pass = "";
+const user = process.env.EMAIL_USER;
+const pass = process.env.EMAIL_PASSWORD;
+const host = process.env.EMAIL_HOST
+const port = process.env.EMAIL_PORT
 
 class Emailcontroller {
     async emailDeConfirmacao(req, res) {
@@ -10,8 +12,8 @@ class Emailcontroller {
         const { codigo } = req.params;
 
         const transporter = nodemailer.createTransport({
-            host: "smtp.umbler.com",
-            port: 587,
+            host: host,
+            port: port,
             auth: { user, pass }
         })
 
