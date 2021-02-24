@@ -16,7 +16,7 @@ class Emailcontroller {
             port: port,
             auth: { user, pass }
         })
-
+        
         transporter.sendMail({
             from: user,
             to: email,
